@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nominus</title>
+    <link rel="icon" type="image/png" href="img/icon_nominus.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="cadastro_script.js"></script>
+</head>
+<body>
+
+    <video src="img/background_01.mp4" autoplay loop muted id="video"></video>
+
+    <main>
+        <hr>
+        <div id="container1">
+            <h2>NOMINUS</h2>
+            <nav name="tela1" id="menu">
+                <ul>
+                    <li id="incluir"><a id="incluir" class="btn" onclick="incluir()">Incluir</a></li>
+                    <li id="editar"><a id="editar" class="btn" href="#">Editar</a></li>
+                    <li id="salvar"><a id="salvar" class="btn" onclick="salvar()">Salvar</a></li>
+                    <li id="excluir"><a id="excluir" class="btn" href="#">Excluir</a></li>
+                    <li id="cancelar"><a id="cancelar" class="btn" onclick="cancelar()">Cancelar</a></li>
+                </ul>
+            </nav>
+
+            <div id="btn_menu" class="hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="mobileMenu">
+                <ul>
+                    <li id="incluir"><a id="incluir" class="btn" onclick="incluir()">Incluir</a></li>
+                    <li id="editar"><a id="editar" class="btn" href="#">Editar</a></li>
+                    <li id="salvar"><a id="salvar" class="btn" onclick="salvar()">Salvar</a></li>
+                    <li id="excluir"><a id="excluir" class="btn" href="#">Excluir</a></li>
+                    <li id=""><a id="cancelar" class="btn" onclick="cancelar()">Cancelar</a></li>
+                </ul>
+            </nav>
+            
+            <section id="containerBox" name="tela1" class="inputs">
+                <div id="line1">
+                    <div id="column">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" disabled required>
+                    </div>
+
+                    <div id="column">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" name="sobrenome" id="sobrenome" disabled required>
+                    </div>
+                </div>
+        
+                <div id="line2">
+                    <div id="column">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" name="endereco" id="endereco" disabled required>
+                    </div>
+                </div>
+
+                <div id="line3">
+                    <div id="column">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" disabled required>
+                    </div>
+
+                    <div id="botao2">
+                        <a id="logout" href="index.html">Log out</a>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
+
+        <div name="tela1" id="botao3" onclick="visualizar()">
+            <div>
+                <a href="#"><img src="img/botao_icon.png" alt="botão_img"></a>
+                <p>Banco de Dados</p>
+            </div>
+        </div>
+        
+        <!-- BANCO DE DADOS -->
+        
+        <div id="container2">
+            <section id="container">
+                <div id="box1">
+                    <h2>BANCO DE DADOS</h2>
+                    <hr>
+                    <article>Nesta área, você terá acesso a todos 
+                    os cadastros armazenados na plataforma. As 
+                    informações disponíveis são organizadas de 
+                    forma segura, clara e objetiva, permitindo 
+                    uma visualização completa dos registros inseridos até o momento.</article>
+                </div>
+                
+                <div id="box2">
+                    <div id="display1">
+                        <h3>Nome</h3>
+                        <p id="visorNome" >***** ***** *****</p>
+                    </div>
+                    
+                    <div id="display2">
+                        <h3>Endereço</h3>
+                        <p id="visorEndereco">***** ***** *****</p>
+                    </div>
+                    
+                    <div id="display3">
+                        <h3>Telefone</h3>
+                        <p id="visorTelefone">(00) 00000-0000</p>
+                    </div>
+                </div>
+            </section>
+
+            <div id="botao4">
+                <ul>
+                    <li><a href="#"><img id="icon" src="/img/first_icon.png" alt=""></a></li>
+                    <li><a onclick="anterior()"><img id="icon2" src="/img/return_icon.png" alt=""></a></li>
+                    <li><a onclick="proximo()"><img id="icon2" src="/img/next_icon.png" alt=""></a></li>
+                    <li><a href="#"><img id="icon" src="/img/end_icon.png" alt=""></a></li>
+                </ul>
+                <hr>
+                <div>
+                    <a onclick="voltar()"><img id="return" src="img/botao_icon.png" alt="botão_img"></a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const btnMenu = document.getElementById("btn_menu");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        btnMenu.addEventListener("click", () => {
+            mobileMenu.classList.toggle("active");
+            btnMenu.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>

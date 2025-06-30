@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nominus - Log in</title>
+    <link rel="icon" type="image/png" href="img/icon_nominus.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_login.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <video src="img/background_01.mp4" autoplay loop muted id="video"></video>
+S
+
+    <main>
+        <div id="informacao">
+            <h2>NOMINUS</h2>
+            <hr>
+            <h3>Bem-vindo ao nosso sistema de cadastro!</h3>
+            <article>Aqui, você pode acessar sua conta de forma segura e prática para gerenciar informações de pessoas, acompanhar registros e manter tudo organizado em um só lugar.</article>
+            <div id="QrCode">
+            </div>
+            <footer>
+                <img src="img/Qrcode.jpg" alt="QR_Code">
+                © 2025 NOMINUS — Todos os direitos reservados.
+            </footer>
+        </div>
+            
+        <div id="login">
+            <form>
+                <h2>LOG IN</h2>
+
+                <label for="username">Nome de Usuario</label>
+                <input id="username" type="text" name="username" required>
+                
+                <label for="password">Senha</label>
+                <input id="password" type="password" name="password" required>
+
+                <div id="botao">
+                    <button onclick="validar(event)">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <section id="back">
+        <section class="alert">
+            <div id="close">
+                <img onclick="close_alert()" src="img/icon_close.png" alt="_img_">
+            </div>
+
+            <h2>Senha incorreta</h2>
+            <hr>
+            <p>Por favor, verifique seu nome de usuario e senha e tente novamente.</p>
+
+            <div>
+                <article>
+                    Para acessar o sistema NOMINUS utiize:<br>
+                    o nome de usuario "admin" e a senha "admin".
+                </article>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
